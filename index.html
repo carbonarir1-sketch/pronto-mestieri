@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eef2f8">
+  <title>Pronto Mestieri</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css?v=33">
+</head>
+<body>
+  <header class="topbar">
+    <button class="back press" id="back" aria-label="Indietro" hidden><i data-lucide="chevron-left"></i></button>
+    <div class="brand" id="brand"></div>
+    <button class="zona-btn press" id="zonaBtn"><i data-lucide="map-pin"></i><span id="zonaLabel">Ancona</span><i data-lucide="chevron-down"></i></button>
+    <button class="menu-btn press" id="menuBtn" aria-label="Apri il menu"></button>
+  </header>
+
+  <main id="app"></main>
+
+  <nav class="tabbar">
+    <a href="#/" data-tab="home"><i data-lucide="house"></i>Home</a>
+    <a href="#/mappa" data-tab="mappa"><i data-lucide="map"></i>Mappa</a>
+    <a href="#/urgenza" data-tab="urgenza" class="fab press">SOS</a>
+    <a href="#/richieste" data-tab="richieste"><i data-lucide="message-circle"></i>Richieste</a>
+    <a href="#/artigiano" data-tab="artigiano"><i data-lucide="briefcase"></i>Lavora</a>
+  </nav>
+
+  <div class="sheet-bg" id="sheetBg"></div>
+  <div class="sheet" id="sheet"></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data.js?v=33"></script>
+  <script src="core.js?v=33"></script>
+  <script src="cliente.js?v=33"></script>
+  <script src="sos.js?v=33"></script>
+  <script src="pro.js?v=33"></script>
+  <script src="admin.js?v=33"></script>
+  <script src="menu.js?v=33"></script>
+  <script src="preventivi.js?v=33"></script>
+  <script>avvia();</script>
+</body>
+</html>
